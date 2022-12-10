@@ -1,4 +1,4 @@
 # MyPage
 
 
-### Pagina sencilla
+## Pagina sencilla
