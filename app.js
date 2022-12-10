@@ -1,10 +1,20 @@
-const express = require(express);
+const express = require('express');
 const app = express();
-const PORT = 5090
-app.listen(port ,(req , res) => {
-	res.send(console.log(`server start in ${port}`));
-});
+const path = require('path');
+const PORT = 3000;
 
-app.get('/', (req ,res) =>{
-	res.send('<h1>Servidor is : Start</h1>');
-})
+app.listen(PORT);
+
+app.get('/',function (req ,res) {
+	let options ={
+		root: path.join(__dirname)
+	};
+	let fileName = './public/index.html';
+	res.sendFile(fileName, options, function(err) {
+		if (err){
+			next(err);
+		}else{
+			console.log(fileName);
+		}
+	});
+});
