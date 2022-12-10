@@ -1,3 +1,4 @@
-# front
-# front
 # MyPage
+
+
+### Pagina sencilla
